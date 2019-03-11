@@ -1,0 +1,36 @@
+{
+  "name": "au-tax-calc",
+  "version": "1.0.0",
+  "description": "Individual Australian tax rate given an income for FY2018-2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamzerella/au-tax-calc.git"
+  },
+  "keywords": [
+    "australia",
+    "australia",
+    "ato",
+    "tax",
+    "calculation",
+    "calculator"
+  ],
+  "author": "Adam Zerella <hello@adamzerella.com> (https://adamzerella.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamzerella/au-tax-calc/issues"
+  },
+  "homepage": "https://github.com/adamzerella/au-tax-calc#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "types": "index.d.ts"
+}
