@@ -2,6 +2,8 @@
 
 > 💵 Individual Australian tax rate given an income for FY2018-2019.
 
+[![Build Status](https://travis-ci.org/adamzerella/au-tax-calc.svg?branch=master)](https://travis-ci.org/adamzerella/au-tax-calc)
+
 I'm aspiring to make open-source my full-time work. If you like the work that I do, please consider supporting me.
 
 [![Coffee][badge_coffee_donate]](https://www.buymeacoffee.com/adamzerella)
@@ -31,9 +33,9 @@ The output will be a number rounded to two decimal places.
 ### Module
 
 ```javascript
-const CalculateTax = require( 'au-tax-calc' );
+const calculateTax = require( 'au-tax-calc' );
 
-CalculateTax( 43565 );
+calculateTax( 43565 );
 // 5705.63
 ```
 

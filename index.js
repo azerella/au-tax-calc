@@ -3,7 +3,7 @@
  * 
  * @param {number} income - Taxable income
  */
-const CalculateTax = ( income ) => {
+const calculateTax = ( income ) => {
     if( income < 18200 ){
         return 0;
     }
@@ -24,4 +24,4 @@ const CalculateTax = ( income ) => {
     }
 }
 
-module.exports = CalculateTax;
+module.exports = calculateTax;
