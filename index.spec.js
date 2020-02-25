@@ -1,4 +1,4 @@
-const calculateTax = require( './index.js' );
+const { calculateTax, asyncCalculateTax } = require( './index.js' );
 const { expect } = require('chai');
 
 describe( 'calculateTax()', () => {
@@ -28,5 +28,23 @@ describe( 'calculateTax()', () => {
 
     it( 'Should return 802793.05 given a taxable income of 1,843,769', () => {
         expect( calculateTax( 1843769 ) ).to.equal( 802793.05 );
+    });
+});
+
+describe( 'asyncCalculateTax()', async () => {
+    it( 'Should throw an error given an invalid number type', async () => {
+        try {
+            await asyncCalculateTax( 'ab' );
+        } catch( err ) {
+            expect( err.message ).to.equal( "Invalid input" );
+        }
+    });
+
+    it( 'Should return 15887.55 given a taxable income of 74,894', async () => {
+        expect( await asyncCalculateTax( 74894 ) ).to.equal( 15887.55 );
+    });
+
+    it( 'Should return 802793.05 given a taxable income of 1,843,769', async () => {
+        expect( await asyncCalculateTax( 1843769 ) ).to.equal( 802793.05 );
     });
 });
