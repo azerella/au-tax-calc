@@ -1,14 +1,18 @@
 {
   "name": "au-tax-calc",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Individual Australian tax rate given an income for FY2018-2019",
   "main": "index.js",
   "scripts": {
-    "test": "mocha index.spec.js"
+    "test": "mocha index.spec.js",
+    "prettier": "prettier --write **/*.{ts,js,css,html}"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adamzerella/au-tax-calc.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "australia",
@@ -16,9 +20,14 @@
     "ato",
     "tax",
     "calculation",
-    "calculator"
+    "calculator",
+    "salary",
+    "pay"
   ],
   "author": "Adam Zerella <hello@adamzerella.com> (https://adamzerella.com)",
+  "contributors": [
+    "Simon Victory <email@simonvictory.com> (https://simonvictory.com)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adamzerella/au-tax-calc/issues"
@@ -26,11 +35,19 @@
   "homepage": "https://github.com/adamzerella/au-tax-calc#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.0.1"
+    "husky": "^4.2.5",
+    "mocha": "^7.0.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
   },
   "files": [
     "index.js",
     "index.d.ts"
   ],
-  "types": "index.d.ts"
+  "types": "index.d.ts",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }
